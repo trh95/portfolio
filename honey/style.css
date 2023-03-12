@@ -36,6 +36,7 @@ img {
     height: auto;
 }
 
+/* Split the screen in half */
 .split {
     height: 100%;
     width: 50%;
@@ -46,17 +47,20 @@ img {
     padding-top: 20px;
 }
 
+/* Control the left side */
 .left {
     left: 0;
     color: #d4b609;
     background-color: #333;
 }
 
+/* Control the right side */
 .right {
     right: 0;
     background-color: #e1a546;
 }
 
+/* If you want the content centered horizontally and vertically */
 .centered {
     position: absolute;
     top: 50%;
@@ -71,71 +75,6 @@ img {
 
 }
 
-/* ---HEADER---*/
-
-header {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    padding: 0 100px 30px 30px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    z-index: 10;
-}
-
-.logo img {
-    width: 6rem !important;
-    margin-left: 5em;
-}
-
-.cart img {
-    padding: .5em;
-}
-
-.cart {
-    border: 2px solid #e1a546;
-    border-radius: 50%;
-    margin-left: 2em;
-}
-
-.cart:hover {
-    border: 2px solid #333;
-    border-radius: 50%;
-
-
-
-}
-
-header ul {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-header ul li {
-    list-style: none;
-    margin-left: 20px;
-}
-
-header ul li a {
-    text-decoration: none;
-    padding: 6px 15px;
-    color: #333;
-    border-radius: 20px;
-    font-size: 1.3rem;
-}
-
-header ul li a:hover,
-header ul li a.active {
-    background-color: #333;
-    /* background-image: url(./img/bg.jpg);
-    background-size: 400%; */
-    color: #d4b609;
-}
-
-/* ---HEADER---*/
 
 
 .contact ul li {
@@ -269,8 +208,68 @@ header ul li a.active {
     overflow: hidden;
 }
 
-/* ---HEADER---*/
+/*--- HAMBURGER ---*/
+.menu-btn {
+    position: fixed;
+    right: 0;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    width: 80px;
+    height: 80px;
+    cursor: pointer;
+    transition: all .5s ease-in-out;
+    z-index: 100;
 
+}
+
+.menu-btn_burger {
+    width: 50px;
+    height: 6px;
+    background: #a0a0a0de;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px var(--lightdark-color);
+    transition: all .5s ease-in-out;
+    z-index: 100;
+}
+
+.menu-btn_burger::before,
+.menu-btn_burger::after {
+    content: '';
+    position: absolute;
+    width: 50px;
+    height: 6px;
+    background: #a0a0a0de;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px var(--lightdark-color);
+    transition: all .5s ease-in-out;
+}
+
+.menu-btn_burger::before {
+    transform: translateY(-16px);
+}
+
+.menu-btn_burger::after {
+    transform: translateY(16px);
+}
+
+/* HAMBURGER ANIMATION */
+.menu-btn.open .menu-btn_burger {
+    transform: translateX(-50px);
+    background: transparent;
+    box-shadow: none;
+}
+
+.menu-btn.open .menu-btn_burger::before {
+    transform: rotate(45deg) translate(35px, -35px);
+}
+
+.menu-btn.open .menu-btn_burger::after {
+    transform: rotate(-45deg) translate(35px, 35px);
+}
+
+/* HAMBURGER ANIMATION */
+/*--- HAMBURGER ---*/
 header {
     position: absolute;
     top: 0;
@@ -287,23 +286,21 @@ header {
     width: 6rem !important;
     margin-left: 5em;
 }
-
-.cart img {
+.cart img{
     padding: .5em;
 }
-
 .cart {
     border: 2px solid #e1a546;
     border-radius: 50%;
     margin-left: 2em;
 }
 
-.cart:hover {
+.cart:hover {    
     border: 2px solid #333;
-    border-radius: 50%;
-
-
-
+  border-radius: 50%;
+    
+    
+    
 }
 
 header ul {
@@ -332,3 +329,189 @@ header ul li a.active {
     background-size: 400%; */
     color: #d4b609;
 }
+
+/* ---HEADER---*/
+
+
+
+/*--- MEDIA ---*/
+
+@media (max-width: 480px) {
+    html {
+        font-size: 55%;
+    }
+
+    .main {
+        width: 100%;
+    }
+
+    .main #text {
+        font-size: 20vw;
+        left: 0.6em;
+    }
+
+    .portfolio {
+        padding: 1rem 14% 2rem;
+    }
+
+    .portfolioContainer {
+        gap: 6rem
+    }
+
+    .card {
+        min-width: 180px;
+    }
+
+    footer h4 {
+        font-size: 1.2rem;
+    }
+
+    footer a img {
+        width: 80px;
+    }
+
+
+
+}
+
+@media (max-width: 530px) {
+    .about {
+        display: grid;
+    }
+
+    .right-img img {
+        min-width: 15rem;
+    }
+
+    .contactContainer #left {
+        min-width: 700px;
+        height: auto;
+    }
+
+    .contactContainer #tnt {
+        min-width: 600px;
+        height: auto;
+    }
+
+    .boomContact #boom {
+        min-width: 800px;
+        height: auto;
+    }
+}
+
+@media (max-width: 700px) {
+
+    .portfolioContainer {
+        margin: 5rem 5rem;
+        grid-template-columns: 1fr;
+    }
+
+}
+
+@media (max-width: 768px) {
+    header {
+        margin: 1em;
+    }
+
+    .menu-btn {
+        display: flex;
+    }
+
+    .menu {
+        display: none;
+    }
+
+    #nav.active {
+        display: block;
+    }
+
+    #nav a {
+        display: none;
+    }
+
+    .container {
+        width: 750px;
+    }
+}
+
+@media (max-width: 992px) {
+    .container {
+        width: 970px;
+    }
+}
+
+@media (max-width: 1150px) {}
+
+
+
+
+.mobile-nav {
+    position: fixed;
+    top: 0;
+    left: 100%;
+    width: 100%;
+    min-height: 50px;
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    z-index: 9;
+    background-color: #094b6591;
+    padding-top: 6em;
+    transition: 0.4s;
+}
+
+.mobile-nav.is-active {
+    left: 0;
+}
+
+
+.mobile-nav ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2em;
+    margin: 2em;
+}
+
+.mobile-nav ul li {
+    text-align: center;
+    list-style: none;
+    margin-left: 20px;
+}
+
+.mobile-nav ul li a {
+    text-decoration: none;
+    padding: 6px 15px;
+    color: var(--dark-color);
+    border-radius: 20px;
+    font-size: 2rem;
+}
+
+.mobile-nav ul li a:hover,
+.mobile-nav ul li a.active {
+    background: var(--dark-color);
+    color: var(--light-color);
+}
+
+/* SHOW ANIMATION */
+
+.hidden {
+    opacity: 0;
+    filter: blur(5px);
+    transform: translateX(-100%);
+    transition: all 1s;
+}
+
+.show {
+    opacity: 1;
+    filter: blur(0);
+    transform: translateX(0);
+}
+
+@media(prefers-reduced-motion) {
+    .hidden {
+        transition: none;
+    }
+}
+
+/* SHOW ANIMATION */
