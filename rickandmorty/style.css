@@ -1,51 +1,61 @@
 body {
-    
-    background-image:url(../rickandmorty/bg2.jpg);
+
+    background-image: url(../rickandmorty/img/bg2.jpg);
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
     background-attachment: fixed;
 
 }
-h1, h7{
+
+h1,
+h7 {
     color: #01e7e7;
-} 
+}
 
 .card {
     background-color: #8dff2f9f;
     box-shadow: 5px 8px 20px rgba(102, 255, 0, 0.365)
 }
+
 .card:hover {
     transform: scale(1.05);
     background-color: #8dff2fd8;
     box-shadow: 5px 8px 20px rgba(102, 255, 0, 0.365)
 }
-#gomb, #back{
+
+#Btn,
+#back {
     background-color: #0c0f0fd3;
     color: #01e7e7;
     border-color: #01e7e72f;
 }
-#back{
+
+#back {
     margin: 20px 20px;
 }
-#gomb:hover, #back:hover{
+
+#Btn:hover,
+#back:hover {
     background-color: #0c0f0fea;
     color: #01e7e7;
     border-color: #01e7e7;
 }
-.page-link{
+
+.page-link {
     background-color: #8dff2f00;
     color: #01e7e7;
     border-color: #8dff2fd8;
 }
-.page-link:hover{
+
+.page-link:hover {
     background-color: #01e7e738;
     color: #01e7e7;
     border-color: #8dff2fd8;
-   
+
 }
 
-.form-control{
+.form-control {
     background-color: rgba(248, 242, 242, 0);
     border: 1px solid #01e7e7;
 
@@ -59,18 +69,20 @@ h1, h7{
     --bs-btn-hover-color: #05ffff;
 }
 
-.navbar-toggler{
+.navbar-toggler {
     color: #01e7e710;
     border-color: #01e7e7;
 }
 
-.nav-link{
+.nav-link {
     color: #01e7e780;
 }
-.nav-link:hover{
+
+.nav-link:hover {
     color: #8dff2f8e;
 }
-.navbar-nav .nav-link.active{
+
+.navbar-nav .nav-link.active {
     color: #01e7e7;
 }
 
@@ -80,29 +92,32 @@ h1, h7{
     border-color: #01e7e738;
 }
 
-tr:hover{
+tr:hover {
     background-color: #8dff2f1f;
     color: #01e7e7;
 }
-thead{
+
+thead {
     background-color: #01e7e738;
 }
 
-#char{
-    
+#char {
+
     border: 1px solid #01e7e7;
     border-radius: 8px;
     color: #01e7e7;
-    background-image:url(../rickandmorty/bg2.jpg);
+    background-color: #0000006b;
+    /* background-image:url(../rickandmorty/bg2.jpg); */
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
     position: relative;
     box-shadow: 5px 8px 20px #01e7e765;
-    
-    
-    
+
+
+
 }
+
 #pic {
     border: 1px solid #ddd;
     border-radius: 10px;
@@ -110,4 +125,4 @@ thead{
     box-shadow: 5px 8px 20px #01e7e765;
     padding: 5px;
     width: 150px;
-  }
+}

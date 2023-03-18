@@ -1,9 +1,8 @@
-document.getElementById("szuroGomb").addEventListener("click", function(){
-    var szuroNev = document.getElementById("szuro").value;
-    window.location.href = "http://127.0.0.1:5500/rickandmorty/characters/charcters.html?name=" + szuroNev;
+document.getElementById("filterBtn").addEventListener("click", function(){
+    var filterName = document.getElementById("filter").value;
+    window.location.href = "http://127.0.0.1:5500/rickandmorty/characters/characters.html?name=" + filterName;
 }, false);
 
-//https://rickandmortyapi.com/api/character
 var urlParams = new URLSearchParams(window.location.search);
 var page = Number(urlParams.get('page'));
 var name = urlParams.get("name");
@@ -23,7 +22,6 @@ else{
     apiUrl = "https://rickandmortyapi.com/api/character";
 }
 
-//Ha a page = 0 IGAZ akkor legyen 1, amugy page
 page = ((page == 0) ? 1 : page);
 
 var xhr = new XMLHttpRequest();
@@ -36,31 +34,31 @@ xhr.onreadystatechange = function () {
 
         var ul = document.getElementById("ul");
 
-        //Elso oldal gomb
-        var elsoA = document.createElement("a");
-        elsoA.setAttribute("class", "page-link");
+        //First button
+        var firstA = document.createElement("a");
+        firstA.setAttribute("class", "page-link");
 
-        var elsoUrl = "http://127.0.0.1:5500/rickandmorty/characters/charcters.html?page=1";
+        var firstUrl = "http://127.0.0.1:5500/rickandmorty/characters/characters.html?page=1";
         if(name != "null"){
-            elsoUrl += "&name=" + name;
+            firstUrl += "&name=" + name;
         }
-        elsoA.setAttribute("href", elsoUrl);
-        elsoA.appendChild(document.createTextNode("First"));
+        firstA.setAttribute("href", firstUrl);
+        firstA.appendChild(document.createTextNode("First"));
 
-        var elsoLi = document.createElement("li");
-        elsoLi.setAttribute("class", "page-item");
+        var firstLi = document.createElement("li");
+        firstLi.setAttribute("class", "page-item");
 
-        elsoLi.appendChild(elsoA);
+        firstLi.appendChild(firstA);
 
-        ul.appendChild(elsoLi);
+        ul.appendChild(firstLi);
 
-        //Szamos gombok
+        //Number button
         for(var i = (page - 1); i <= (page + 1); i++){
             var aktA = document.createElement("a");
             aktA.setAttribute("class", "page-link");
             
 
-            var aktUrl = "http://127.0.0.1:5500/rickandmorty/characters/charcters.html?page=" + i;
+            var aktUrl = "http://127.0.0.1:5500/rickandmorty/characters/characters.html?page=" + i;
             if(name != "null"){
                 aktUrl += "&name=" + name;
             }
@@ -81,23 +79,23 @@ xhr.onreadystatechange = function () {
             ul.appendChild(aktLi);
         }
 
-        //Utolso oldal gomb
-        var utolsoA = document.createElement("a");
-        utolsoA.setAttribute("class", "page-link");
+        //lasst page button
+        var lastA = document.createElement("a");
+        lastA.setAttribute("class", "page-link");
 
-        var utolsoUrl = "http://127.0.0.1:5500/rickandmorty/characters/charcters.html?page=" + json.info.pages;
+        var lastUrl = "http://127.0.0.1:5500/rickandmorty/characters/characters.html?page=" + json.info.pages;
         if(name != "null"){
-            utolsoUrl += "&name=" + name;
+            lastUrl += "&name=" + name;
         }
-        utolsoA.setAttribute("href", utolsoUrl);
-        utolsoA.appendChild(document.createTextNode("Last"));
+        lastA.setAttribute("href", lastUrl);
+        lastA.appendChild(document.createTextNode("Last"));
 
-        var utolsoLi = document.createElement("li");
-        utolsoLi.setAttribute("class", "page-item");
+        var lastLi = document.createElement("li");
+        lastLi.setAttribute("class", "page-item");
 
-        utolsoLi.appendChild(utolsoA);
+        lastLi.appendChild(lastA);
 
-        ul.appendChild(utolsoLi);
+        ul.appendChild(lastLi);
 
         /*
         <div class="card" style="width: 18rem;">
@@ -140,11 +138,11 @@ xhr.onreadystatechange = function () {
             pLocation.appendChild(document.createTextNode(json.results[i].location.name));
             pEpisodes.appendChild(document.createTextNode(json.results[i].episode.length));
 
-            var gomb = document.createElement("a");
-            gomb.setAttribute("class", "btn w-100");
-            gomb.setAttribute("id", "gomb");
-            gomb.setAttribute("href", "http://127.0.0.1:5500/rickandmorty/characters/charcters.html?id=" + json.results[i].id + "&current=" + page);
-            gomb.appendChild(document.createTextNode("Data sheet"));
+            var Btn = document.createElement("a");
+            Btn.setAttribute("class", "btn w-100");
+            Btn.setAttribute("id", "Btn");
+            Btn.setAttribute("href", "http://127.0.0.1:5500/rickandmorty/character/character.html?id=" + json.results[i].id + "&current=" + page);
+            Btn.appendChild(document.createTextNode("Data sheet"));
 
             var cardBody = document.createElement("div");
             cardBody.setAttribute("class", "card-body");
@@ -157,7 +155,7 @@ xhr.onreadystatechange = function () {
             cardBody.appendChild(pLocation);
             cardBody.appendChild(h6Episodes);
             cardBody.appendChild(pEpisodes);
-            cardBody.appendChild(gomb);
+            cardBody.appendChild(Btn);
 
             var img = document.createElement("img");
             img.setAttribute("class", "card-img-top");
@@ -172,12 +170,12 @@ xhr.onreadystatechange = function () {
             card.appendChild(img);
             card.appendChild(cardBody);
 
-            var cella = document.createElement("div");
-            cella.setAttribute("class", "col-12 col-md-4 col-lg-3 my-3");
+            var cell = document.createElement("div");
+            cell.setAttribute("class", "col-12 col-md-4 col-lg-3 my-3");
 
-            cella.appendChild(card);
+            cell.appendChild(card);
 
-            document.getElementById("racs").appendChild(cella);
+            document.getElementById("grid").appendChild(cell);
         }
     }
 };
