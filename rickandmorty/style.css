@@ -7,6 +7,24 @@ body {
     background-attachment: fixed;
 
 }
+/*--- SCROLLBAR ---*/
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #333;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #1b1b1b;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #01e7e7;
+}
+
+/*--- SCROLLBAR ---*/
 
 h1,
 h7 {
