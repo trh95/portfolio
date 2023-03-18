@@ -1,0 +1,47 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-image: url(./img/bg2.jpg);
+    background-position: center;
+    background-size: cover;
+    justify-content: center;
+}
+
+.card{
+    background-color: #4b6777;
+}
+
+
+.social-icon{
+    height: 46px;
+    width: 46px;
+    border: 1px solid #333;
+    margin: 0 0.45rem;
+    border-radius: 50%;
+    
+}
+.social-icon:hover{
+    border: 2px solid #ffffff;
+    border-radius: 50%;
+    
+}
+
+ /*--- SCROLLBAR ---*/
+  ::-webkit-scrollbar {
+      width: 10px;
+  }
+
+  ::-webkit-scrollbar-track {
+      background: #333;
+  }
+
+  ::-webkit-scrollbar-thumb {
+      background: #222;
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+      background: #1a1a1a;
+  }
