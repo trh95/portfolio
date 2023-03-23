@@ -15,7 +15,7 @@ xhr.onreadystatechange = function () {
         // First page button
         var firstA = document.createElement("a");
         firstA.setAttribute("class", "page-link");
-        firstA.setAttribute("href", "http://127.0.0.1:5500/portfolio/rickandmorty/locations/locations.html?page=1");
+        firstA.setAttribute("href", "https://trh95.github.io/portfolio/rickandmorty/locations/locations.html?page=1");
         firstA.appendChild(document.createTextNode("First"));
 
         var firstLi = document.createElement("li");
@@ -29,7 +29,7 @@ xhr.onreadystatechange = function () {
         for (var i = (page - 1); i <= (page + 1); i++) {
             var aktA = document.createElement("a");
             aktA.setAttribute("class", "page-link");
-            aktA.setAttribute("href", "http://127.0.0.1:5500/portfolio/rickandmorty/locations/locations.html?page=" + i);
+            aktA.setAttribute("href", "https://trh95.github.io/portfolio/rickandmorty/locations/locations.html?page=" + i);
             aktA.appendChild(document.createTextNode(i));
 
             var aktLi = document.createElement("li");
@@ -49,7 +49,7 @@ xhr.onreadystatechange = function () {
         // Last page button
         var lastA = document.createElement("a");
         lastA.setAttribute("class", "page-link");
-        lastA.setAttribute("href", "http://127.0.0.1:5500/portfolio/rickandmorty/locations/locations.html?page=" + json.info.pages);
+        lastA.setAttribute("href", "https://trh95.github.io/portfolio/rickandmorty/locations/locations.html?page=" + json.info.pages);
         lastA.appendChild(document.createTextNode("Last"));
 
         var lastLi = document.createElement("li");

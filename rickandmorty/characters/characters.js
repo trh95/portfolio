@@ -1,6 +1,6 @@
 document.getElementById("filterBtn").addEventListener("click", function(){
     var filterName = document.getElementById("filter").value;
-    window.location.href = "http://127.0.0.1:5500/portfolio/rickandmorty/characters/characters.html?name=" + filterName;
+    window.location.href = "https://trh95.github.io/portfolio/rickandmorty/characters/characters.html?name=" + filterName;
 }, false);
 
 var urlParams = new URLSearchParams(window.location.search);
@@ -38,7 +38,7 @@ xhr.onreadystatechange = function () {
         var firstA = document.createElement("a");
         firstA.setAttribute("class", "page-link");
 
-        var firstUrl = "http://127.0.0.1:5500/portfolio/rickandmorty/characters/characters.html?page=1";
+        var firstUrl = "https://trh95.github.io/portfolio/rickandmorty/characters/characters.html?page=1";
         if(name != "null"){
             firstUrl += "&name=" + name;
         }
@@ -58,7 +58,7 @@ xhr.onreadystatechange = function () {
             aktA.setAttribute("class", "page-link");
             
 
-            var aktUrl = "http://127.0.0.1:5500/portfolio/rickandmorty/characters/characters.html?page=" + i;
+            var aktUrl = "https://trh95.github.io/portfolio/rickandmorty/characters/characters.html?page=" + i;
             if(name != "null"){
                 aktUrl += "&name=" + name;
             }
@@ -83,7 +83,7 @@ xhr.onreadystatechange = function () {
         var lastA = document.createElement("a");
         lastA.setAttribute("class", "page-link");
 
-        var lastUrl = "http://127.0.0.1:5500/portfolio/rickandmorty/characters/characters.html?page=" + json.info.pages;
+        var lastUrl = "https://trh95.github.io/portfolio/rickandmorty/characters/characters.html?page=" + json.info.pages;
         if(name != "null"){
             lastUrl += "&name=" + name;
         }
@@ -141,7 +141,7 @@ xhr.onreadystatechange = function () {
             var Btn = document.createElement("a");
             Btn.setAttribute("class", "btn w-100");
             Btn.setAttribute("id", "Btn");
-            Btn.setAttribute("href", "http://127.0.0.1:5500/portfolio/rickandmorty/character/character.html?id=" + json.results[i].id + "&current=" + page);
+            Btn.setAttribute("href", "https://trh95.github.io/portfolio/rickandmorty/character/character.html?id=" + json.results[i].id + "&current=" + page);
             Btn.appendChild(document.createTextNode("Data sheet"));
 
             var cardBody = document.createElement("div");

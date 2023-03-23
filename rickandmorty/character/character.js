@@ -41,7 +41,7 @@ xhr.onreadystatechange = function(){
 
             xhr2.send(null);
         }
-        document.getElementById("back").setAttribute("href", "http://127.0.0.1:5500/portfolio/rickandmorty/characters/characters.html?page=" + current);
+        document.getElementById("back").setAttribute("href", "https://trh95.github.io/portfolio/rickandmorty/characters/characters.html?page=" + current);
        
        
     }
