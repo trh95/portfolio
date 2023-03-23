@@ -18,7 +18,7 @@ xhr.onreadystatechange = function(){
         //Elso oldal gomb
         var elsoA = document.createElement("a");
         elsoA.setAttribute("class", "page-link");
-        elsoA.setAttribute("href", "http://127.0.0.1:5500/rickandmorty/episodes/episodes.html?page=1");
+        elsoA.setAttribute("href", "http://127.0.0.1:5500/portfolio/rickandmorty/episodes/episodes.html?page=1");
         elsoA.appendChild(document.createTextNode("First"));
 
         var elsoLi = document.createElement("li");
@@ -32,7 +32,7 @@ xhr.onreadystatechange = function(){
         for(var i = (page - 1); i <= (page + 1); i++){
             var aktA = document.createElement("a");
             aktA.setAttribute("class", "page-link");
-            aktA.setAttribute("href", "http://127.0.0.1:5500/rickandmorty/episodes/episodes.html?page=" + i);
+            aktA.setAttribute("href", "http://127.0.0.1:5500/portfolio/rickandmorty/episodes/episodes.html?page=" + i);
             aktA.appendChild(document.createTextNode(i));
 
             var aktLi = document.createElement("li");
@@ -52,7 +52,7 @@ xhr.onreadystatechange = function(){
         //Utolso oldal gomb
         var utolsoA = document.createElement("a");
         utolsoA.setAttribute("class", "page-link");
-        utolsoA.setAttribute("href", "http://127.0.0.1:5500/rickandmorty/episodes/episodes.html?page=" + json.info.pages);
+        utolsoA.setAttribute("href", "http://127.0.0.1:5500/portfolio/rickandmorty/episodes/episodes.html?page=" + json.info.pages);
         utolsoA.appendChild(document.createTextNode("Last"));
 
         var utolsoLi = document.createElement("li");
