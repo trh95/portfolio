@@ -264,7 +264,6 @@
       width: 25vw;
       z-index: 8;
       filter: drop-shadow(2px 6px 4px #333)
-      
   }
 
   .social-icon {
@@ -297,7 +296,7 @@
       margin: 0 3rem 2rem 0;
       background: var(--lightdark-color);
       border-radius: 4rem;
-      
+
       font-size: 1.6rem;
       color: var(--font-color);
       letter-spacing: .1rem;
@@ -307,7 +306,7 @@
   }
 
   .cvBtn:hover {
-    box-shadow: 0 0 1rem var(--lightdark-color);
+      box-shadow: 0 0 1rem var(--lightdark-color);
       z-index: 10;
   }
 
@@ -351,8 +350,9 @@
       box-shadow: 0 0 1rem var(--lightdark-color);
       z-index: 8;
   }
+
   .card .cvBtn {
-    color: #a0a0a0;
+      color: #a0a0a0;
   }
 
   .card_title {
@@ -525,11 +525,13 @@
       background: var(--lightdark-color);
       box-shadow: 0 0 3rem red;
   }
-  #left{
-    filter: drop-shadow(8px 6px 4px #333)
+
+  #left {
+      filter: drop-shadow(8px 6px 4px #333)
   }
-  #tnt{
-    filter: drop-shadow(0px 3px 8px #333)
+
+  #tnt {
+      filter: drop-shadow(0px 3px 8px #333)
   }
 
   /* --- LINE DRAW --- */
@@ -599,8 +601,9 @@
       .card {
           min-width: 300px;
       }
-      .card-img{
-        width: 100%;
+
+      .card-img {
+          width: 100%;
       }
 
       footer h4 {
@@ -640,7 +643,7 @@
       }
   }
 
-  
+
 
   @media (max-width: 768px) {
       header {
@@ -672,16 +675,18 @@
       .container {
           width: 970px;
       }
+
       .portfolioContainer {
-        margin: 5rem 5rem;
-        grid-template-columns: 1fr;
-    }
+          margin: 5rem 5rem;
+          grid-template-columns: 1fr;
+      }
   }
 
   @media (max-width: 1200px) {
-    .line-container{
-        display: none;
-    }
+      .line-container {
+          display: none;
+      }
+
       .container {
           width: 1170px;
       }
