@@ -291,7 +291,7 @@ img {
 
 .contact li {
     list-style: none;
-    margin-left: 20px;
+    /* margin-left: 20px; */
     text-align: start;
     text-decoration: none;
 }
@@ -540,6 +540,18 @@ img {
 
     .menu-btn {
         margin-top: 70px;
+    }
+    .centered {
+        position: relative;
+    }
+    .centered p {
+        margin: 10px 15px
+    }
+    .map iframe{
+        width: 160px;
+    }
+    .product-img {
+        width: 200px;
     }
 
 }
